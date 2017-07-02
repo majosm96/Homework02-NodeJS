@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cars</title>
+	<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+	<main class="container-fluid">
+		<a id="btn-dowload">Dowload table</a>
+		<section class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+			<h2>Cars</h2>
+			<table id="cars" class="table table-bordered table-striped table-hover">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Model</th>
+						<th>Brand</th>
+						<th>Year</th>
+						<th>Price</th>
+						<th>Color</th>
+						<th>Style</th>
+						<th>Controls</th>
+					</tr>
+				</thead>
+			</table>
+		</section>
+		<!--<section class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+			<h2>Styles</h2>
+			<table id="styles" class="table table-bordered table-striped table-hover">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Description</th>
+						<th>Style</th>
+					</tr>
+				</thead>
+			</table>
+		</section>-->
+		<section class="col-sm-12 col-md-8 col-lg-8 col-lg-offset-1">
+			<form id="carForm" name="carForm" class="form-horizontal">
+				<input type="hidden" name="id" value="0">
+
+				<div class="form-group">
+					<div class="col-sm-12">
+						<h3>Add Car</h3>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="name" class="col-sm-2 col-lg-1 control-label">Model</label>
+					<div class="col-sm-10">
+						<input type="text" name="model" id="model" class="form-control" placeholder="Model" required>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="lastname" class="col-sm-2 col-lg-1 control-label">Brand</label>
+					<div class="col-sm-10">
+						<input type="text" name="brand" id="brand" class="form-control" placeholder="Brand" required>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="grade" class="col-sm-2 col-lg-1 control-label">Year</label>
+					<div class="col-sm-10">
+						<input type="number" name="year" id="year" class="form-control" min="1990" max="2020" placeholder="Year" required>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="grade" class="col-sm-2 col-lg-1 control-label">Price</label>
+					<div class="col-sm-10">
+						<input type="number" name="price" id="price" class="form-control" placeholder="Price" required>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="grade" class="col-sm-2 col-lg-1 control-label">Color</label>
+					<div class="col-sm-10">
+						<input type="text" name="color" id="color" class="form-control" placeholder="Color" required>
+					</div>
+				</div>
+
+				<!--<div class="form-group">
+					<label for="style" class="col-sm-2 col-lg-1 control-label">Style</label>
+					<div class="col-sm-10">
+						<input type="text" name="style" id="style" class="form-control" placeholder="Style" required>
+					</div>
+				</div>-->
+
+				<div class="form-group">
+					<label for="style" class="col-sm-2 col-lg-1 control-label">Style</label>
+					<div class="col-sm-10">
+						<select name="style" id="style" class="form-control" required="">
+							<!-- <option value="1">1</option> -->
+						</select>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<div class="col-sm-10 col-sm-push-2 col-lg-10 col-lg-push-1">
+						<button type="reset" class="btn btn-default">Reset</button>
+						<button type="submit" class="btn btn-primary pull-right">Submit</button>
+					</div>
+				</div>
+			</form>
+		</section>
+
+		<section class="col-sm-12 col-md-8 col-lg-8 col-lg-offset-1">
+			<form id="styleForm" name="styleForm" class="form-horizontal">
+				<input type="hidden" name="id" value="0">
+
+				<div class="form-group">
+					<div class="col-sm-12">
+						<h3>Add New Car Style</h3>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="name" class="col-sm-2 col-lg-1 control-label">Description</label>
+					<div class="col-sm-10">
+						<input type="text" name="description" id="description" class="form-control" placeholder="Description">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="carStyle" class="col-sm-2 col-lg-1 control-label">Style</label>
+					<div class="col-sm-10">
+						<input type="text" name="carStyle" id="carStyle" class="form-control" placeholder="carStyle" required>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-10 col-sm-push-2 col-lg-10 col-lg-push-1">
+						<button type="reset" class="btn btn-default">Clear</button>
+						<button type="submit" class="btn btn-primary pull-right">Add</button>
+					</div>
+				</div>
+			</form>
+		</section>
+	</main>
+
+	<script src="./node_modules/jquery/dist/jquery.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
